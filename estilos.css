@@ -1,0 +1,203 @@
+/* Reset de estilos para eliminar márgenes y rellenos predeterminados */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo para el cuerpo del sitio */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* Estilo para el header con imagen de fondo */
+header {
+    background-image: url('https://100seguro.com.ar/wp-content/uploads/2023/09/MicrosoftTeams-image-178-1024x509.jpg'); /* Reemplaza 'ruta/a/tu/imagen.jpg' con la ubicación de tu imagen de fondo */
+    background-size: cover; /* Ajusta la imagen para que cubra todo el header */
+    background-repeat: no-repeat; /* Evita la repetición de la imagen */
+    background-position: center center; /* Centra la imagen en el header */
+    text-align: center; /* Centra el contenido del header horizontalmente */
+    color: white; /* Cambia el color del texto si es necesario para que se vea bien en la imagen */
+    padding: 40px 0; /* Añade espacio alrededor del contenido (ajusta según tus necesidades) */
+}
+
+
+header nav ul {
+    list-style: none;
+    
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+    color: #00487c; /* Color azul */
+    font-weight: bold; /* Texto en negrita */
+    font-style: italic; /* Texto en cursiva */
+}
+
+
+/* Estilo base para los botones */
+ul li {
+    list-style: none;
+}
+
+/* Estilo para los botones enlace (enlace sin decoración) */
+ul li a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    text-decoration: none; /* Elimina la subrayado de los enlaces */
+    background-color: #00487c; /* Color de fondo del botón */
+    color: #fff; /* Color del texto en los botones */
+    border: 2px solid #00487c; /* Borde del botón */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Cambiar el color de fondo al pasar el mouse por encima */
+ul li a:hover {
+    background-color: white; /* Color de fondo al pasar el mouse */
+    border-color: #00487; /* Borde al pasar el mouse */
+    color: #00487c; /* Color azul */
+    font-weight: bold; /* Texto en negrita */
+    font-style: italic; /* Texto en cursiva */
+}
+
+
+header h1 {
+    font-size: 60px;
+    margin-top: 20px;
+    border: 2px solid #00487c; /* Agrega un borde de 2 píxeles de ancho y color blanco */
+    border-radius: 10px; /* Aplica bordes redondeados con un radio de 10 píxeles */
+    color: white; /* Establece el color del texto en azul */
+    padding: 10px 20px; /* Añade un relleno alrededor del texto para dar espacio entre el texto y el borde */
+    background-color: #00487c
+}
+section h2 {
+    font-size: 20px;
+    margin-top: 20px;
+    border: 2px solid #00487c; /* Agrega un borde de 2 píxeles de ancho y color blanco */
+    border-radius: 10px; /* Aplica bordes redondeados con un radio de 10 píxeles */
+    color: #00487c; /* Establece el color del texto en azul */
+    padding: 10px; /* Añade un relleno alrededor del texto para dar espacio entre el texto y el borde */
+}
+
+header p {
+    font-size: 18px;
+    margin: 10px 20px;
+   text-align: center;
+   border: 2px solid #00487c; /* Agrega un borde de 2 píxeles de ancho y color blanco */
+   border-radius: 10px; /* Aplica bordes redondeados con un radio de 10 píxeles */
+   color: white; /* Establece el color del texto en azul */
+   padding: 10px 20px; /* Añade un relleno alrededor del texto para dar espacio entre el texto y el borde */
+   background-color: #00487c
+   }
+
+
+/* Estilo para el contenido principal */
+/* Estilo para el contenido principal */
+main {
+    width: 80%; /* Ocupa el 80% del espacio horizontal */
+    margin: 0 auto; /* Centra horizontalmente el contenido principal */
+    text-align: center; /* Centra el contenido dentro de main */
+}
+
+
+/* Estilo para la sección */
+section {
+    margin: auto 0; /* Centra horizontalmente el contenido principal */
+}
+
+#contenido {
+    text-align: center; /* Centra el contenido horizontalmente */
+    width: 50%; /* Ocupa el 80% del espacio horizontal */
+    margin: auto 0; /* Centra horizontalmente el contenido principal */
+}
+
+#contenido h2 {
+    font-size: 30px;
+    border: 2px solid #00487c;
+    border-radius: 10px;
+   width: 200% ; /* Establece el ancho al 100% para que se extienda por toda la pantalla */
+    padding: 10px;
+    margin-top: 20px;
+}
+
+@media screen and (min-width: 768px) {
+    section {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    section {
+        width: 33%;
+    }
+}
+
+
+/* Estilo para la galería y el carrusel */
+.galeria {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Centra verticalmente las imágenes */
+    width: 200%; /* Ancho del viewport */
+    overflow-x: auto; /* Agrega una barra de desplazamiento horizontal si es necesario */
+}
+
+.galeria img, .carrusel img {
+    max-width: 500px; /* Ajusta las imágenes al ancho del contenedor */
+    height: 200px; /* Mantiene la relación de aspecto */
+}
+
+.carrusel {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 100%; /* Aumenta el alto del carrusel según tus necesidades */
+    transition: transform 0.5s ease;
+    margin: 20px 0; /* Añade margen arriba y abajo para separación */
+    padding: 10px; /* Añade espacio interior para mayor separación */
+}
+
+.carrusel img {
+    flex: 1 1 100%; /* Establece que cada imagen ocupe el 100% del ancho disponible (equidistantes) */
+    width: 100%;
+    height: auto;
+    margin-right: 10px; /* Agrega margen derecho para separación entre imágenes */
+    border: 2px solid #00487c; /* Agrega un borde azul a cada imagen */
+    border-radius: 10px; /* Aplica bordes redondeados a cada imagen */
+}
+
+/* Elimina el margen derecho de la última imagen para evitar un espacio adicional */
+.carrusel img:last-child {
+    margin-right: 0;
+}
+
+
+
+
+/* Estilo para los botones de "Anterior" y "Siguiente" */
+#prev, #next {
+    margin: 10px; /* Agrega margen a los botones para separarlos del carrusel */
+    cursor: pointer;
+}
+
+/* Estilo para el pie de página */
+footer {
+    text-align: center;
+    background-color: #00487c;
+    color: #fff;
+    padding: 10px 0;
+}
+
+/* Estilo para enlaces en el pie de página */
+footer a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Estilo para el enlace en el menú de navegación */
+header li a:hover {
+    text-decoration: underline;
+}
