@@ -98,14 +98,14 @@ header p {
 /* Estilo para el contenido principal */
 main {
     width: 80%; /* Ocupa el 80% del espacio horizontal */
-    margin: 0 auto; /* Centra horizontalmente el contenido principal */
+    margin: auto auto; /* Centra horizontalmente el contenido principal */
     text-align: center; /* Centra el contenido dentro de main */
 }
 
 
 /* Estilo para la sección */
 section {
-    margin: auto 0; /* Centra horizontalmente el contenido principal */
+    margin: auto auto; /* Centra horizontalmente el contenido principal */
 }
 
 #contenido {
@@ -125,7 +125,7 @@ section {
 
 @media screen and (min-width: 768px) {
     section {
-        width: 50%;
+        width: 0%;
     }
 }
 
@@ -138,16 +138,21 @@ section {
 
 /* Estilo para la galería y el carrusel */
 .galeria {
+   margin-top: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center; /* Centra verticalmente las imágenes */
+    height: 120px;
     width: 200%; /* Ancho del viewport */
-    overflow-x: auto; /* Agrega una barra de desplazamiento horizontal si es necesario */
+   
+    background-color: #00487c;
+    border-radius: 10px; /* Bordes redondeados */
 }
 
 .galeria img, .carrusel img {
-    max-width: 500px; /* Ajusta las imágenes al ancho del contenedor */
+    max-width: 120px; /* Ajusta las imágenes al ancho del contenedor */
     height: 200px; /* Mantiene la relación de aspecto */
+   
 }
 
 .carrusel {
@@ -164,9 +169,10 @@ section {
     flex: 1 1 100%; /* Establece que cada imagen ocupe el 100% del ancho disponible (equidistantes) */
     width: 100%;
     height: auto;
-    margin-right: 10px; /* Agrega margen derecho para separación entre imágenes */
-    border: 2px solid #00487c; /* Agrega un borde azul a cada imagen */
+    margin-right: 100%; /* Agrega margen derecho para separación entre imágenes */
+    border: 2px solid white; /* Agrega un borde azul a cada imagen */
     border-radius: 10px; /* Aplica bordes redondeados a cada imagen */
+ 
 }
 
 /* Elimina el margen derecho de la última imagen para evitar un espacio adicional */
@@ -174,13 +180,36 @@ section {
     margin-right: 0;
 }
 
-
-
+.contenedor {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 100%; /* Aumenta el alto del carrusel según tus necesidades */
+    transition: transform 0.5s ease;
+    margin: 20px 0; /* Añade margen arriba y abajo para separación */
+    padding: 10px; /* Añade espacio interior para mayor separación */
+}
 
 /* Estilo para los botones de "Anterior" y "Siguiente" */
-#prev, #next {
+#prev
+{
     margin: 10px; /* Agrega margen a los botones para separarlos del carrusel */
-    cursor: pointer;
+   margin-left: 70%;
+    background-color: #00487c; /* Color de fondo al pasar el mouse */
+    border-color: #00487c; /* Borde al pasar el mouse */
+    color: white; /* Color azul */
+    font-weight: bold; /* Texto en negrita */
+    font-style: italic; /* Texto en cursiva */
+}
+
+#next {
+    margin: 10px; /* Agrega margen a los botones para separarlos del carrusel */
+ 
+    background-color: #00487c; /* Color de fondo al pasar el mouse */
+    border-color: #00487c; /* Borde al pasar el mouse */
+    color: white; /* Color azul */
+    font-weight: bold; /* Texto en negrita */
+    font-style: italic; /* Texto en cursiva */
 }
 
 /* Estilo para el pie de página */
